@@ -62,7 +62,11 @@ const App = () => {
             </div>
           </main>
         ))}
-      {tours.length > 0 && <Tours tours={tours} removeTour={removeTour} />}
+      {tours.length > 0 && (
+        <main>
+          <Tours tours={tours} removeTour={removeTour} />
+        </main>
+      )}
     </>
   )
 }

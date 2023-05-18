@@ -222,13 +222,13 @@ ul {
   text-transform: capitalize;
 }
 /* alert */
-@keyframes spinner {
+/* @keyframes spinner {
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
-.loading {
+/* .loading {
   width: 6rem;
   height: 6rem;
   border: 5px solid var(--grey-400);
@@ -236,7 +236,7 @@ ul {
   margin: 0 auto;
   border-top-color: var(--primary-500);
   animation: spinner 0.3s linear infinite;
-}
+} */
 /* title */
 
 .title {
@@ -252,6 +252,22 @@ ul {
 }
 /* ============= PROJECT CSS =============== */
 
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid var(--grey-400);
+  border-radius: 50%;
+  margin: 0 auto;
+  border-top-color: var(--primary-500);
+  animation: spinner 0.7s linear infinite;
+}
+
 main {
   width: 90vw;
   max-width: var(--max-width);
@@ -263,7 +279,6 @@ main {
   display: grid;
   gap: 2rem;
 }
-
 .single-tour {
   background: var(--white);
   border-radius: var(--borderRadius);
@@ -286,6 +301,7 @@ main {
   background: var(--primary-500);
   border-top-right-radius: var(--borderRadius);
 }
+
 .single-tour .img {
   height: 20rem;
   border-top-right-radius: var(--borderRadius);
@@ -304,9 +320,10 @@ main {
 }
 .tour-info p {
   margin-bottom: 1.25rem;
-  line-height: 1.5;
   color: var(--grey-500);
+  line-height: 1.5;
 }
+
 .info-btn,
 .delete-btn {
   background: transparent;
@@ -326,6 +343,7 @@ main {
 .delete-btn:hover {
   background: var(--primary-500);
   color: var(--white);
+  border: 1px solid var(--primary-500);
 }
 
 @media screen and (min-width: 768px) {
@@ -337,5 +355,6 @@ main {
 @media screen and (min-width: 992px) {
   .tours {
     grid-template-columns: 1fr 1fr 1fr;
+    /* align-items: start; */
   }
 }

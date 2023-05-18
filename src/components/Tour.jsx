@@ -3,7 +3,7 @@ import { useState } from 'react'
 const Tour = ({ id, name, info, price, image, removeTour }) => {
   const [readMore, setReadMore] = useState(false)
   return (
-    <div className='single-tour'>
+    <article className='single-tour'>
       <img src={image} alt={name} className='img' />
       <span className='tour-price'>${price}</span>
       <div className='tour-info'>
@@ -27,7 +27,7 @@ const Tour = ({ id, name, info, price, image, removeTour }) => {
           not interested
         </button>
       </div>
-    </div>
+    </article>
   )
 }
 export default Tour
